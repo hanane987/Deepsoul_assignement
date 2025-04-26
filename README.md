@@ -37,7 +37,7 @@ Added an autoplay testimonial carousel with hover-to-pause functionality.
 
 How to Run
 
-Clone the Repository:git clone https://github.com/hanane987/DeepSoul.git
+Clone the Repository:git clone https://github.com/hanane987/Deepsoul_assignement.git
 
 
 Navigate to the Project Directory:cd deepsoul-assignement/deepsoul 

@@ -130,7 +130,7 @@ export default function Footer() {
           className="pt-8 border-t border-[#001233] dark:border-[#001845] flex flex-col md:flex-row justify-between items-center"
         >
           <p className="text-[#fffae6] dark:text-[#fffae6] text-sm mb-4 md:mb-0">
-            © {new Date().getFullYear()} DeepSoul. All rights reserved.
+            © {new Date().getFullYear()} DeepSoul. All rights reserved.Made by Hanane Lemnissir.
           </p>
           <div className="flex space-x-4">
             {socialLinks.map((social, index) => (

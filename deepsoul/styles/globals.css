@@ -1,4 +1,187 @@
-/* File: styles/globals.css */
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+:root {
+  --foreground-rgb: 255, 250, 230;
+  --background-rgb: 0, 18, 51;
+}
+
+.dark {
+  --foreground-rgb: 255, 250, 230;
+  --background-rgb: 0, 24, 69;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  color: rgb(var(--foreground-rgb));
+  background: rgb(var(--background-rgb));
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: #001233;
+}
+
+.dark ::-webkit-scrollbar-track {
+  background: #001845;
+}
+
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(to bottom, #001233, #ff9966);
+  border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(to bottom, #ff9966, #ffbb99);
+}
+
+/* Animations */
+@keyframes float {
+  0% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-20px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
+}
+
+.animate-float {
+  animation: float 6s ease-in-out infinite;
+}
+
+/* Typography enhancements */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  letter-spacing: -0.025em;
+}
+
+/* Gradient border support */
+.border-gradient-to-r {
+  border-image: linear-gradient(to right, var(--tw-gradient-from), var(--tw-gradient-to)) 1;
+}
+
+/* Glow effects */
+.glow-blue {
+  filter: drop-shadow(0 0 8px rgba(0, 18, 51, 0.5));
+}
+
+.glow-orange {
+  filter: drop-shadow(0 0 8px rgba(255, 153, 102, 0.5));
+}
+
+/* Custom animations */
+@keyframes pulse-glow {
+  0%,
+  100% {
+    filter: drop-shadow(0 0 5px rgba(0, 18, 51, 0.3));
+  }
+  50% {
+    filter: drop-shadow(0 0 15px rgba(0, 18, 51, 0.6));
+  }
+}
+
+.animate-pulse-glow {
+  animation: pulse-glow 3s ease-in-out infinite;
+}
+
+@keyframes shimmer {
+  0% {
+    background-position: -200% 0;
+  }
+  100% {
+    background-position: 200% 0;
+  }
+}
+
+.animate-shimmer {
+  background: linear-gradient(90deg, rgba(0, 18, 51, 0) 0%, rgba(0, 18, 51, 0.2) 50%, rgba(0, 18, 51, 0) 100%);
+  background-size: 200% 100%;
+  animation: shimmer 3s infinite;
+}
+
+/* Backdrop blur enhancements */
+.backdrop-blur-custom {
+  backdrop-filter: blur(8px) saturate(180%);
+}
+
+/* Button animations */
+.btn-pulse {
+  animation: button-pulse 2s infinite;
+}
+
+@keyframes button-pulse {
+  0% {
+    box-shadow: 0 0 0 0 rgba(255, 153, 102, 0.7);
+  }
+  70% {
+    box-shadow: 0 0 0 10px rgba(255, 153, 102, 0);
+  }
+  100% {
+    box-shadow: 0 0 0 0 rgba(255, 153, 102, 0);
+  }
+}
+
+/* Gradient text animation */
+.animate-gradient-text {
+  background-size: 200% 200%;
+  animation: gradient-shift 3s ease infinite;
+}
+
+@keyframes gradient-shift {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+/* Floating elements */
+.floating {
+  animation: floating 5s ease-in-out infinite;
+}
+
+@keyframes floating {
+  0%,
+  100% {
+    transform: translateY(0) rotate(0deg);
+  }
+  25% {
+    transform: translateY(-10px) rotate(2deg);
+  }
+  50% {
+    transform: translateY(0) rotate(0deg);
+  }
+  75% {
+    transform: translateY(10px) rotate(-2deg);
+  }
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .animate-float {
+    animation-duration: 4s;
+  }
+
+  .floating {
+    animation-duration: 3s;
+  }
+}
